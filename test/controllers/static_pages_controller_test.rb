@@ -11,4 +11,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get ap_seminar" do
+  	get static_pages_ap_seminar_url
+  	assert_response :success
+  end
+
 end

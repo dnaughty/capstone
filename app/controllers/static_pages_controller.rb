@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def intro
   end
+
+  def ap_seminar
+  end
 end
