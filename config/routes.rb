@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ap_seminar/lesson_1'
+  get 'ap_seminar/lesson_2'
   get 'static_pages/home'
   get 'static_pages/intro'
   get 'static_pages/ap_seminar'
