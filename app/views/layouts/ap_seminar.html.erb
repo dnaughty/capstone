@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>South Shore Studies | <%= yield(:title) %></title>
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "South Shore Studies", 'static_pages/home', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Lesson 1",    'lesson_1' %></li>
+              <li><%= link_to "Lesson 2",    '#' %></li>
+              <li><%= link_to "Boner", '#' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
