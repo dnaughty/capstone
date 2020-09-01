@@ -6,5 +6,12 @@ class StaticPagesController < ApplicationController
   end
 
   def ap_seminar
+
+  
   end
+
+
+  
+
+
 end
