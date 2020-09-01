@@ -1,32 +1,17 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
-    <title>South Shore Studies | <%= yield(:title) %></title>
-    
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track' => true %>
     <%= javascript_pack_tag 'application' %>
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "South Shore Studies", '#', id: "logo" %>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Home",    '#' %></li>
-              <li><%= link_to "Intro",    '#' %></li>
-              <li><%= link_to "AP Seminar", '#' %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+
+    <%= render 'layouts/header' %>
+   
     <div class="container">
       <%= yield %>
     </div>
