@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  get 'ap_seminar/lesson_1'
-  get 'ap_seminar/lesson_2'
-  get 'static_pages/home'
-  get 'static_pages/intro'
-  get 'static_pages/ap_seminar'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+ 
 
-  root 'static_pages#home'
-
+  root      'static_pages#home'
+  get 'intro' => 'static_pages#intro'
+  get 'ap' => 'static_pages#ap'
+  
 end
